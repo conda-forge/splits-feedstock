@@ -11,6 +11,18 @@ Summary: A library for dealing with splittable files
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/splits-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/splits-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/splits-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/splits-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/splits-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/splits-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/splits/badges/version.svg)](https://anaconda.org/conda-forge/splits)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/splits/badges/downloads.svg)](https://anaconda.org/conda-forge/splits)
+
 Installing splits
 =================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `splits` available on your platfor
 ```
 conda search splits --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/splits-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/splits-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/splits-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/splits-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/splits-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/splits-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/splits/badges/version.svg)](https://anaconda.org/conda-forge/splits)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/splits/badges/downloads.svg)](https://anaconda.org/conda-forge/splits)
 
 
 Updating splits-feedstock
