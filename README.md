@@ -14,9 +14,7 @@ Summary: A library for dealing with splittable files
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/splits-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/splits-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/splits-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/splits-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/splits-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/splits-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/splits-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/splits-feedstock)
 
 Current release info
 ====================
