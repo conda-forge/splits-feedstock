@@ -27,6 +27,7 @@ requirements:
     - python
     - boto
     - nose
+    - six
 
 test:
   imports:
