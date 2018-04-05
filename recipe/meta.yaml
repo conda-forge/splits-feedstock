@@ -21,10 +21,12 @@ build:
 requirements:
   build:
     - python
+    - setuptools
 
   run:
     - python
     - boto
+    - nose
 
 test:
   imports:
