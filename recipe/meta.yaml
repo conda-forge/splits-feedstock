@@ -1,9 +1,8 @@
-{%set name = "splits" %}
-{%set version = "0.1.1" %}
-{%set compress_type = "tar.gz" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "b87dbd579c72e65200a12c7bdf6b01707ec368d2851fa2f5b0ee7a7983bf9fda" %}
-{%set build_num = "0" %}
+{% set name = "splits" %}
+{% set version = "0.1.7" %}
+{% set compress_type = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_val = "809c7dd09e6de8cf1d747cf4c46264485b55b4e0465b3aa828bee84c5e511be0" %}
 
 package:
   name: {{ name|lower }}
@@ -15,17 +14,20 @@ source:
   {{ hash_type }}: {{ hash_val }}
 
 build:
-  skip: True  # [py3k]
-  number: {{ build_num }}
-  script: python setup.py install
+  noarch: python
+  number: 0
+  script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
   build:
     - python
+    - setuptools
 
   run:
     - python
     - boto
+    - nose
+    - six
 
 test:
   imports:
