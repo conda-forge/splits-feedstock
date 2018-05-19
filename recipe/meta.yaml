@@ -1,8 +1,8 @@
 {% set name = "splits" %}
-{% set version = "0.1.7" %}
+{% set version = "0.1.8" %}
 {% set compress_type = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "809c7dd09e6de8cf1d747cf4c46264485b55b4e0465b3aa828bee84c5e511be0" %}
+{% set hash_val = "9154ec5801e325b46f388cec3edd6e365d2b90d0f7e80a2f8bb1ea2d4a99260a" %}
 
 package:
   name: {{ name|lower }}
@@ -10,18 +10,18 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.{{ compress_type }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
   {{ hash_type }}: {{ hash_val }}
 
 build:
   noarch: python
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
 
   run:
     - python
