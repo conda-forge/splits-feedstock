@@ -1,8 +1,8 @@
 {% set name = "splits" %}
-{% set version = "0.1.8" %}
+{% set version = "0.1.9" %}
 {% set compress_type = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "9154ec5801e325b46f388cec3edd6e365d2b90d0f7e80a2f8bb1ea2d4a99260a" %}
+{% set hash_val = "0d599bdf25482d0a9cb8a5b095542fe3cdf2c4bc8bd13e8ef3cb2b83f7e36678" %}
 
 package:
   name: {{ name|lower }}
