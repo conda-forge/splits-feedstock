@@ -1,7 +1,6 @@
 {% set name = "splits" %}
 {% set version = "0.1.9" %}
 {% set compress_type = "tar.gz" %}
-{% set hash_type = "sha256" %}
 {% set hash_val = "0d599bdf25482d0a9cb8a5b095542fe3cdf2c4bc8bd13e8ef3cb2b83f7e36678" %}
 
 package:
@@ -11,25 +10,27 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ compress_type }}
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
-  {{ hash_type }}: {{ hash_val }}
+  sha256: {{ hash_val }}
 
 build:
   noarch: python
-  number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 1
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
-    - python
+  host:
+    - python {{ python_min }}
     - pip
 
   run:
-    - python
+    - python >={{ python_min }}
     - boto
     - nose
     - six
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - splits
     - splits.readers
